@@ -1,34 +1,20 @@
-// "use strict";
-// var __extends = (this && this.__extends) || (function () {
-//     var extendStatics = function (d, b) {
-//         extendStatics = Object.setPrototypeOf ||
-//             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-//             function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-//         return extendStatics(d, b);
-//     };
-//     return function (d, b) {
-//         if (typeof b !== "function" && b !== null)
-//             throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-//         extendStatics(d, b);
-//         function __() { this.constructor = d; }
-//         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-//     };
-// })();
-// Object.defineProperty(exports, "__esModule", { value: true });
-// exports.BasePetType = exports.InvalidStateError = void 0;
-// var types_1 = require("../common/types");
-// var states_1 = require("./states");
-// var InvalidStateError = /** @class */ (function (_super) {
-//     __extends(InvalidStateError, _super);
-//     function InvalidStateError(fromState, petType) {
-//         var _this = _super.call(this, "Invalid state ".concat(fromState, " for pet type ").concat(petType)) || this;
-//         _this.fromState = fromState;
-//         _this.petType = petType;
-//         return _this;
-//     }
-//     return InvalidStateError;
-// }(Error));
-// exports.InvalidStateError = InvalidStateError;
+let extd, iSE, bPT;
+
+extd = require("../extends");
+
+iSE = function (fst, pT) {
+  Error.call(this, `Invalid State ${fst} for pet type ${pT}`);
+  this.fst = fst;
+  this.pT = pT;
+  return this;
+}
+extd(iSE, Error);
+
+bPT = function (sL, spe, size) {
+  
+}
+
+
 // var BasePetType = /** @class */ (function () {
 //     function BasePetType(spriteElement, collisionElement, speechElement, size, left, bottom, petRoot, floor, name, speed) {
 //         this.label = 'base';
@@ -49,7 +35,6 @@
 //         this._name = name;
 //         this._size = size;
 //         this._speed = this.randomizeSpeed(speed);
-//         // Increment the static count of the Pet class that the constructor belongs to
 //         this.constructor.count += 1;
 //     }
 //     BasePetType.prototype.initSprite = function (petSize, left, bottom) {
