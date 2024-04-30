@@ -1,18 +1,12 @@
 {
-    "name": "better-pets",
-    "displayName": "Better Pets",
-    "description": "Pets for your VS Code",
-    "version": "0.0.1",
-    "categories": [],
-    "keywords": [],
-    "license": "MIT",
-    "icon": "icon.png",
-    "activationEvents": [],
-    "main": "./out/extension/extension.js",
-    "browser": "./dist/web/extension-web.js",
-    "scripts": {},
-    "devDependencies": {},
-    "dependencies": {
-        "@vscode/l10n": "^0.0.10"
-    }
+  "name": "better-pets",
+  "version": "1.0.0",
+  "description": "Pets!",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
 }
